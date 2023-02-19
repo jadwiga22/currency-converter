@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+    <title>Currency converter</title>
+</head>
+<body>
+    <div class="container">
+        <form method="post">
+            <div class="box">
+                <div class="field">
+                    <label for="send">You send</label>
+                </div>
+                <div> 
+                    <input type="text" name="send" id="send" value="<%=send%>"> 
+                    <span class="flag-icon flag-icon-pl flag-icon-squared" style="margin-left: 5px;"></span> PLN
+                </div>                   
+            </div>
+
+            <div class="box">
+                <div class="field">
+                    <label for="receive">They receive</label>
+                </div>
+                <div>
+                    <input type="text" name="receive" id="receive" value="<%=receive%>"> 
+                    <span class="flag-icon flag-icon-gb flag-icon-squared" style="margin-left: 5px;"></span> GBP
+                </div>
+            </div>
+
+            <div class="box" style="font-size: 30px;">
+                1 GBP = <%= rate %> PLN
+            </div>
+    
+            <div class="box btn" style="margin-bottom: 20px;">  
+                <button>Calculate</button>
+            </div>
+        </form>
+        <form action="/" method="get">
+            <div class="box btn" style="margin-top: 0px;">
+                <button>Clear</button>
+            </div>
+        </form>
+        
+        <% if(message) { %>
+            <div class="box">
+                <%= message %>
+            </div>
+        <% } %>
+        
+    </div>
+</body>
+</html>
