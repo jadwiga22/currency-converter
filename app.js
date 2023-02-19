@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 
 
 app.get('/', async (req, res) => {
-    var rate = (await exchange.GetExchangeRate()).rates[0].mid;
+    var rate = await exchange.GetExchangeRate();
     res.render('index', {
         send: "",
         receive: "",
@@ -25,7 +25,7 @@ app.get('/', async (req, res) => {
 app.post('/', async (req, res) => {
     var send = req.body.send;
     var receive = req.body.receive;
-    var rate = (await exchange.GetExchangeRate()).rates[0].mid;
+    var rate = await exchange.GetExchangeRate();
     var message;
     if(( send === "" && receive === "" ) || ( send !== "" && receive !== "" )) {
         res.render('index', {

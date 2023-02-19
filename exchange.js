@@ -8,7 +8,7 @@ var GetExchangeRate = async () => {
             if(err) {
                 return rej(err);
             } else {
-                return res(JSON.parse(body));
+                return res(JSON.parse(body).rates[0].mid);
             }
         });
     });
