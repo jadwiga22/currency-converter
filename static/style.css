@@ -1,0 +1,40 @@
+.container {
+    display: flex; 
+    width: 500pt; 
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+    margin-top: 10%;
+    background-color: linen;
+}
+
+.box {
+    margin: auto;
+    width: 500pt;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    font-size: large;
+}
+
+.box input[type=text] {
+    padding: 0.5em;
+    border: 2px black;
+    border-radius: 5px;
+    height: 2em;
+    width: 350pt;
+}
+
+.btn button{
+    margin: auto;
+    font-size: large;
+    width: 50%;
+    background-color: lightsteelblue;
+    height: 2em;
+    border-radius: 7px;
+    border: 1px;
+}
+
+.btn button:hover{
+    background-color: rgb(202, 214, 228);
+}
