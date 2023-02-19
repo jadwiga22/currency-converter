@@ -2,6 +2,8 @@
 
 Web app for converting currencies - from PLN to GBP and from GBP to PLN, according to current exchange rate fetched from NBP website.
 
+![Screenshot](./illustration.png)
+
 ##  Instructions
 
 ### Prerequisites
