@@ -28,23 +28,4 @@ function Parser(s) {
     return ToNumber(s1,1,10)+ToNumber(ReverseString(s2), 1/10, 1/10);
 }
 
-console.log(MatchesNumberPattern("38748.23") === true );
-console.log(MatchesNumberPattern("76347s.3874") === false);
-console.log(MatchesNumberPattern("") === false);
-console.log(MatchesNumberPattern("893748") === true);
-console.log(MatchesNumberPattern(".398478") === false);
-console.log(MatchesNumberPattern("23648.234a") === false);
-console.log(MatchesNumberPattern("3879.") === false);
-console.log(MatchesNumberPattern("384947.39478.323") === false);
-
-console.log("----------------------------------")
-console.log(ToNumber("237483", 1, 10) === 237483);
-console.log(ToNumber("00238743", 1, 10) === 238743);
-
-console.log("----------------------------------")
-console.log(Parser("237483") === 237483);
-console.log(Parser("00238743") === 238743);
-console.log(Parser("3894.34786") === 3894.34786);
-console.log(Parser("0.329743") === 0.329743);
-
-module.exports = {Parser};
+module.exports = {MatchesNumberPattern, ReverseString, ToNumber, Parser};
