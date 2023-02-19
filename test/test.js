@@ -66,7 +66,7 @@ describe('Exchange rates', function () {
     describe('#GetExchangeRate()', function () {
         it('correctly fetches exchange rate', async function () {
             var res = await exchange.GetExchangeRate();
-            assert.equal(typeof res.rates[0].mid, 'number');
+            assert.equal(typeof res, 'number');
         });
     });
 });
