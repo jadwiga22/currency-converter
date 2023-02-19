@@ -1,5 +1,6 @@
 var assert = require('assert');
 var parser = require('../parser.js');
+var exchange = require('../exchange.js');
 
 describe('Parsing', function () {
     describe('#MatchesNumberPattern()', function () {
@@ -60,3 +61,12 @@ describe('Parsing', function () {
         });
     });
 })
+
+describe('Exchange rates', function () {
+    describe('#GetExchangeRate()', function () {
+        it('correctly fetches exchange rate', async function () {
+            var res = await exchange.GetExchangeRate();
+            assert.equal(typeof res.rates[0].mid, 'number');
+        });
+    });
+});
