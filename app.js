@@ -45,7 +45,7 @@ app.post('/', async (req, res) => {
                     message: "Enter value in a correct format, which is  a string containing only digits or a string containing dot as a decimal separator."
                 });
             } else {
-                send = parsedReceive/rate;
+                send = parsedReceive*rate;
                 res.render('index', {
                     send: send,
                     receive: parsedReceive,
@@ -64,7 +64,7 @@ app.post('/', async (req, res) => {
                     message: "Enter value in a correct format, which is  a string containing only digits or a string containing dot as a decimal separator."
                 });
             } else {
-                receive = parsedSend*rate;
+                receive = parsedSend/rate;
                 res.render('index', {
                     send: parsedSend,
                     receive: receive,
